@@ -1,5 +1,3 @@
 User-agent: *
-Allow: /
-
-# Sitemap (ajuda os motores de busca a entender melhor a estrutura do seu site)
-Sitemap: https://quickhookup.club/sitemap.xml
+Disallow: 
+Sitemap: https://finderfwb.online/sitemap.xml
