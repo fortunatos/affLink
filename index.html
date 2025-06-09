@@ -102,8 +102,9 @@
 </head>
 <body>
 
-    <script>
-    // Contador aleatório entre 18 e 80
+      <script>
+
+          // Contador aleatório entre 18 e 80
     let counter = Math.floor(Math.random() * (80 - 18 + 1)) + 18;
     const el = document.getElementById("counter");
     setInterval(() => {
@@ -111,7 +112,20 @@
       counter = Math.max(18, Math.min(80, counter + delta));
       el.textContent = counter;
     }, 900);
-    </script>
+      
+    // Geolocalização
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        const city = data.city || 'your city';
+        document.getElementById("city").textContent = city;
+        document.getElementById("city2").textContent = city;
+      })
+      .catch(() => {
+        document.getElementById("city").textContent = 'your city';
+        document.getElementById("city2").textContent = 'your city';
+      });
+  </script>
 
   <div class="card">
     <h1>Are you ready to come in contact with mature women wanting discreet encounters?</h1>
@@ -128,21 +142,6 @@
       This site contains adult content and is intended for individuals 18 years or older. All users are consenting adults.
     </p>
   </div>
-
-  <script>
-    // Geolocalização
-    fetch('https://ipapi.co/json/')
-      .then(res => res.json())
-      .then(data => {
-        const city = data.city || 'your city';
-        document.getElementById("city").textContent = city;
-        document.getElementById("city2").textContent = city;
-      })
-      .catch(() => {
-        document.getElementById("city").textContent = 'your city';
-        document.getElementById("city2").textContent = 'your city';
-      });
-  </script>
 
 </body>
 </html>
