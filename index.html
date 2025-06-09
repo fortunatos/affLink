@@ -30,79 +30,116 @@
         gtag('config', 'G-4RK11EWEJE');
     </script> 
 
-    <meta content='width=device-width, initial-scale=1.0, user-scalable=0' name='viewport'/>
-    <link href="https://maturelovers.club/alecia/378f0dd4826e490864d2573ce6719e6e.static.css" rel="stylesheet"/>
-    <meta content="#ffffff" name="msapplication-TileColor"/>
-    <meta content="https://maturelovers.club/alecia/theme/australianlocals/images/favicon/ms-icon-144x144.png" name="msapplication-TileImage"/>
-
     <style>
-        .background-image{
-            position:fixed;
-            top:0px;
-            left:0px;
-            width:100%;
-            height:100%;
-            background: url('https://maturelovers.club/alecia/in_css_7b82a3f147c0b6b1b41b141976336713.static.jpg') no-repeat center top fixed;
-            animation:zoomInOut 4s infinite;
-            -webkit-animation:zoomInOut 4s infinite;
-        }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      background: url('https://maturelovers.club/alecia/in_css_7b82a3f147c0b6b1b41b141976336713.static.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      backdrop-filter: blur(4px);
+      text-align: center;
+    }
 
-        /* Responsividade e melhor performance */
-        @media (max-width: 768px) {
-            .background-image {
-                background-size: cover;
-            }
-        }
+    .card {
+      background: rgba(0, 0, 0, 0.82);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 380px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
+      line-height: 1.6;
+    }
 
-        .btn-primary {
-            background-color: #cc0000;
-            padding: 15px 30px;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            display: inline-block;
-            margin: 20px 0;
-        }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #ff416c;
+    }
 
-        .btn-primary:hover {
-            background-color: #990000;
-        }
+    p {
+      font-size: 15px;
+      margin: 10px 0;
+    }
 
-        /* Texto e descrição para SEO */
-        .seo-description {
-            color: white;
-            text-align: center;
-            font-size: 18px;
-            max-width: 80%;
-            margin: 20px auto;
-        }
-    </style>
+    .btn {
+      background: #ff416c;
+      color: white;
+      padding: 12px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      margin-top: 20px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
 
+    .btn:hover {
+      background: #ff2a5c;
+    }
+
+    .info {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    a {
+      color: #ff6f91;
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="background-image"></div>
-    <div class="website-container">
 
-        <div class="step step_0" style="display: block;">
-            <div class="step-title">
-                Are you ready to come in contact with mature women wanting discreet encounters?
-            </div>
+  <div class="card">
+    <h1>Hook Up in 5 Minutes – No Account, No Hassle</h1>
+    <p>Meet someone in <strong><span id="city">your city</span></strong> tonight – it’s fast, real, and 100% free to try.</p>
+    <p>✅ No signup required<br>✅ Fast match with local singles<br>✅ Mobile-friendly and secure</p>
 
-            <a href="https://bgfffig.hornylocls.com/s/63d00e240fcd5?subsource=FinderFWB">
-                <span class="btn-primary">Yes, let me in!</span>
-            </a>
+    <p class="info">🔥 <span id="counter">24</span> singles are currently online in <span id="city2">your city</span></p>
 
-            <div class="seo-description">
-                Meet real mature women near you who are looking for no-strings-attached encounters. 100% free to join and browse!
-            </div>
+    <a class="btn" href="https://bgfffig.hornylocls.com/s/63d00e240fcd5?subsource=FinderSingles" target="_blank">
+      Start Now – View Local Matches
+    </a>
 
-            <div style="clear:both"></div>
-        </div>
+    <p class="info" style="margin-top:20px;">
+      This site contains adult content and is intended for individuals 18 years or older. All users are consenting adults.
+    </p>
+  </div>
 
-    </div>
+  <script>
+    // Contador aleatório entre 18 e 30
+    let counter = Math.floor(Math.random() * (30 - 18 + 1)) + 18;
+    const el = document.getElementById("counter");
+    setInterval(() => {
+      const delta = Math.random() < 0.5 ? -1 : 1;
+      counter = Math.max(18, Math.min(30, counter + delta));
+      el.textContent = counter;
+    }, 4000);
+
+    // Geolocalização
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        const city = data.city || 'your city';
+        document.getElementById("city").textContent = city;
+        document.getElementById("city2").textContent = city;
+      })
+      .catch(() => {
+        document.getElementById("city").textContent = 'your city';
+        document.getElementById("city2").textContent = 'your city';
+      });
+  </script>
+
 </body>
-
 </html>
