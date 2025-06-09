@@ -119,12 +119,12 @@
   </div>
 
   <script>
-    // Contador aleatório entre 18 e 30
+    // Contador aleatório entre 18 e 80
     let counter = Math.floor(Math.random() * (80 - 18 + 1)) + 18;
     const el = document.getElementById("counter");
     setInterval(() => {
       const delta = Math.random() < 0.5 ? -1 : 1;
-      counter = Math.max(18, Math.min(30, counter + delta));
+      counter = Math.max(18, Math.min(80, counter + delta));
       el.textContent = counter;
     }, 900);
 
