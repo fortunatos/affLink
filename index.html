@@ -102,6 +102,17 @@
 </head>
 <body>
 
+    <script>
+    // Contador aleatório entre 18 e 80
+    let counter = Math.floor(Math.random() * (80 - 18 + 1)) + 18;
+    const el = document.getElementById("counter");
+    setInterval(() => {
+      const delta = Math.random() < 0.5 ? -1 : 1;
+      counter = Math.max(18, Math.min(80, counter + delta));
+      el.textContent = counter;
+    }, 900);
+    </script>
+
   <div class="card">
     <h1>Are you ready to come in contact with mature women wanting discreet encounters?</h1>
     <p>Meet someone in <strong><span id="city">your city</span></strong> tonight – it’s fast, real, and 100% free to try.</p>
@@ -119,15 +130,6 @@
   </div>
 
   <script>
-    // Contador aleatório entre 18 e 80
-    let counter = Math.floor(Math.random() * (80 - 18 + 1)) + 18;
-    const el = document.getElementById("counter");
-    setInterval(() => {
-      const delta = Math.random() < 0.5 ? -1 : 1;
-      counter = Math.max(18, Math.min(80, counter + delta));
-      el.textContent = counter;
-    }, 900);
-
     // Geolocalização
     fetch('https://ipapi.co/json/')
       .then(res => res.json())
