@@ -49,10 +49,8 @@
     }
 
 .card {
-  position: fixed; /* necessário para que 'top' funcione */
-  top: 30px; /* distância do topo */
-  left: 50%; /* centraliza horizontalmente */
-  transform: translateX(-50%); /* ajusta para o centro exato */
+  position: relative; /* necessário para que 'top' funcione nesse caso */
+  top: 50%; /* espaço do topo */
   background: rgba(0, 0, 0, 0.82);
   border-radius: 20px;
   padding: 40px 30px;
@@ -61,7 +59,7 @@
   width: 90%;
   box-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
   line-height: 1.6;
-  z-index: 9999; /* garante que fique por cima */
+  margin: 0 auto; /* centraliza horizontalmente */
 }
 
     h1 {
