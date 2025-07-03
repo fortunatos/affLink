@@ -136,11 +136,9 @@
       .then(res => res.json())
       .then(data => {
         const city = data.city || 'your city';
-        document.getElementById("city").textContent = city;
         document.getElementById("city2").textContent = city;
       })
       .catch(() => {
-        document.getElementById("city").textContent = 'your city';
         document.getElementById("city2").textContent = 'your city';
       });
   </script>
