@@ -68,4 +68,56 @@
     .counter-box {
       margin-top: 30px;
       font-size: 0.9em;
-      color: #ffb
+      color: #ffbdd3;
+    }
+
+    .highlight {
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    // Redirect after 7 seconds
+    setTimeout(() => {
+      window.location.href = "https://youraffiliate.link"; // Replace with your affiliate link
+    }, 7000);
+  </script>
+</head>
+<body>
+
+  <div class="logo">🔥 HookMeUp</div>
+  <div class="subtitle">Finding local hookups in <span id="city">your city</span></div>
+  <div class="loader"></div>
+  <div class="loading-text">Matching you with singles in <span id="city2">your city</span></div>
+
+  <div class="counter-box">
+    <span class="highlight" id="counter">1923</span> users currently online
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Dynamic user counter (between 1000–3000)
+    let counter = Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
+    const el = document.getElementById("counter");
+    setInterval(() => {
+      const delta = Math.random() < 0.5 ? -1 : 1;
+      counter = Math.max(1000, Math.min(3000, counter + delta));
+      el.textContent = counter;
+    }, 900);
+
+    // Geolocation via IP
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        const city = data.city || 'your city';
+        document.getElementById("city").textContent = city;
+        document.getElementById("city2").textContent = city;
+      })
+      .catch(() => {
+        document.getElementById("city").textContent = 'your city';
+        document.getElementById("city2").textContent = 'your city';
+      });
+  </script>
+
+</body>
+</html>
