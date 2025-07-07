@@ -37,104 +37,158 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+ <meta name="description" content="Find real hookups in under 5 minutes. No signup, no stress. Just instant adult fun at QuickHookup.club.">
+  <meta name="keywords" content="instant hookup, no signup dating, casual sex now, hookup in 5 minutes, adult meet now, USA singles, fast adult dating, quick hookup site, sex near me">
+   <link rel="canonical" href="https://finderfwb.online/" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
     body {
       margin: 0;
       padding: 0;
-      background: #000;
-      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
       color: #fff;
+      font-family: 'Roboto', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
+      background-image: url('https://cdn.pixabay.com/photo/2016/07/06/22/14/woman-1509956_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
     }
 
-    .logo {
-      font-size: 2.4em;
-      font-weight: bold;
-      color: #e60073;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 40px 25px;
+      border-radius: 16px;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 0 25px rgba(255, 0, 100, 0.4);
+      z-index: 2;
+    }
+
+    h1 {
+      color: #ff3366;
+      font-size: 26px;
       margin-bottom: 20px;
-      text-shadow: 0 0 10px #ff4d94;
     }
 
-    .subtitle {
-      font-size: 1em;
-      color: #ffb6d1;
-      margin-bottom: 40px;
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
-    .loader {
-      width: 50px;
-      height: 50px;
-      border: 5px solid rgba(255, 255, 255, 0.1);
-      border-top: 5px solid #e60073;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin: 30px 0;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
     }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    ul li::before {
+      content: '✔';
+      color: #ff3366;
+      margin-right: 8px;
     }
 
-    .info {
-      font-size: 1em;
-      color: #ffadc3;
-      margin-top: 10px;
+    ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
     }
 
-    .highlight {
+    .cta-button {
+      display: inline-block;
+      background: #ff3366;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
       font-weight: bold;
-      color: #ff4d94;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 20px;
+      animation: pulse 1.8s infinite;
+      box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+    }
+
+    .cta-button:hover {
+      background: #e6004c;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 51, 102, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(255, 51, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 51, 102, 0); }
+    }
+
+    .city-info {
+      font-size: 16px;
+      margin-top: 25px;
+      color: #ff99cc;
+      font-style: italic;
+    }
+
+    .seo-ghost {
+      display: none;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.85em;
+      color: #aaa;
+      z-index: 2;
+      position: relative;
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 22px; }
+      p, ul li, .cta-button { font-size: 15px; }
+      .overlay { padding: 30px 20px; }
     }
   </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      function AbreLink() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-            var country_code = this.responseText.replace(/(\r\n|\n|\r)/gm, "").split('loc=');
-            country_code = country_code[1].split('tls=')[0];
-
-            jQuery(document).ready(function () {
-              if (document.cookie.indexOf('visited=true') == -1) {
-                var fifteenDays = 1000 * 60 * 60 * 12;
-                var expires = new Date((new Date()).valueOf() + fifteenDays);
-                document.cookie = "visited=true;expires=" + expires.toUTCString();
-
-                if (country_code == "US") {
-                  window.location.href = "https://bgfffig.hornylocls.com/s/63d00e240fcd5?subsource=FFinder";
-                } else {
-                  window.location.href = "https://bgfffig.hornylocls.com/s/63d00e240fcd5?subsource=FFinder";
-                }
-              } else {
-                if (country_code == "US") {
-                  window.location.href = "https://bgfffig.hornylocls.com/s/63d00e240fcd5?subsource=FFinder";
-                } else {
-                  window.location.href = "https://bgfffig.hornylocls.com/s/63d00e240fcd5?subsource=FFinder";
-                }
-              }
-            });
-          }
-        };
-        xhttp.open("GET", "https://www.cloudflare.com/cdn-cgi/trace", true);
-        xhttp.send();
-      }
-    </script>
-	
 </head>
-	
 <body>
 
-  <div class="loader"></div>
+  <div class="overlay">
+    <h1>Hook Up in 5 Minutes – No Account, No Hassle</h1>
+    <p>Real people are online now. Skip the signup, skip the waiting – just tap and meet someone near you tonight.</p>
 
- 	  <script type="text/javascript">
-      setTimeout('AbreLink()', 900);
-    </script>
-  
+    <ul>
+      <li>No registration required</li>
+      <li>Instant access to real local singles</li>
+      <li>Private, fast, and mobile-friendly</li>
+    </ul>
+
+    <a href="https://bgfffig.hornylocls.com/s/63d00e240fcd5?subsource=FFWB" class="cta-button" target="_blank" rel="nofollow noopener">
+      🔥 Get Instant Access
+    </a>
+
+    <div id="geo" class="city-info"></div>
+
+    <div class="seo-ghost">
+      hookup fast USA, no signup sex, adult dating instant, meet local singles now, sex without registration, one-click hookup, get laid in 5 minutes, fast adult match
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 QuickHookup.club – Fast & Private Adult Hookups
+  </footer>
+
+  <script>
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        const city = data.city;
+        const region = data.region_code;
+        const geoEl = document.getElementById('geo');
+        if (city && region) {
+          geoEl.textContent = `🔥 Singles in ${city}, ${region} are online and ready now!`;
+        }
+      });
+  </script>
+
 </body>
 </html>
