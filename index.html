@@ -142,43 +142,34 @@
 </head>
 <body>
 
-  <div class="overlay">
-    <h1>Hook Up in 5 Minutes – No Account, No Hassle</h1>
-    <p>Real people are online now. Skip the signup, skip the waiting – just tap and meet someone near you tonight.</p>
+<script>
+  (function () {
+    const userAgent = navigator.userAgent.toLowerCase();
 
-    <ul>
-      <li>No registration required</li>
-      <li>Instant access to real local singles</li>
-      <li>Private, fast, and mobile-friendly</li>
-    </ul>
+    const botKeywords = [
+      'bot', 'crawl', 'spider', 'facebook', 'twitter', 'slack',
+      'discord', 'linkedin', 'preview', 'whatsapp', 'telegram',
+      'pinterest', 'reddit', 'nuzzel', 'skype', 'google', 'bitlybot'
+    ];
 
-    <a href="https://bgfffig.hubflowsm.com/s/63d00e240fcd5?subsource=FinderFWB" class="cta-button" target="_blank" rel="nofollow noopener">
-      🔥 Get Instant Access
-    </a>
+    // Verifica se é bot
+    for (let i = 0; i < botKeywords.length; i++) {
+      if (userAgent.includes(botKeywords[i])) {
+        document.body.innerHTML = "<h1>Conteúdo temporariamente indisponível.</h1>";
+        return;
+      }
+    }
 
-    <div id="geo" class="city-info"></div>
+    // Link de afiliado codificado em Base64
+    const encodedLink = "aHR0cDovL3F1aWNraG9va3VwLmNsdWI=";
+    const destination = atob(encodedLink);
 
-    <div class="seo-ghost">
-      hookup fast USA, no signup sex, adult dating instant, meet local singles now, sex without registration, one-click hookup, get laid in 5 minutes, fast adult match
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 QuickHookup.club – Fast & Private Adult Hookups
-  </footer>
-
-  <script>
-    fetch("https://ipapi.co/json/")
-      .then(res => res.json())
-      .then(data => {
-        const city = data.city;
-        const region = data.region_code;
-        const geoEl = document.getElementById('geo');
-        if (city && region) {
-          geoEl.textContent = `🔥 Singles in ${city}, ${region} are online and ready now!`;
-        }
-      });
-  </script>
+    // Redireciona após 1.5 segundos
+    setTimeout(() => {
+      window.location.href = destination;
+    }, 200);
+  })();
+</script>
 
 </body>
 </html>
