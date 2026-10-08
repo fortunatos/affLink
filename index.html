@@ -288,6 +288,17 @@
 
   </div>
 
+<script>
+  window.addEventListener('load', function () {
+    function scrollToBottom() {
+      window.scrollTo(0, document.documentElement.scrollHeight);
+    }
+
+    scrollToBottom();
+    setTimeout(scrollToBottom, 500);
+  });
+</script>
+
 </body>
 
 </html>
