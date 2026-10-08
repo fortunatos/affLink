@@ -288,16 +288,26 @@
 
   </div>
 
-<script>
-  window.addEventListener('load', function () {
-    function scrollToBottom() {
-      window.scrollTo(0, document.documentElement.scrollHeight);
-    }
 
-    scrollToBottom();
-    setTimeout(scrollToBottom, 100);
-  });
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  let ultimaAltura = 0;
+
+  function scrollLoop() {
+    const altura = document.documentElement.scrollHeight;
+    window.scrollTo(0, altura);
+
+    if (altura !== ultimaAltura) {
+      ultimaAltura = altura;
+      requestAnimationFrame(scrollLoop); // altura mudou, continua
+    }
+    // se não mudou, para naturalmente
+  }
+
+  scrollLoop();
+});
 </script>
+
 
 </body>
 
