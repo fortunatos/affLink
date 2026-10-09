@@ -292,9 +292,9 @@
     function scrollToBottom() {
       window.scrollTo(0, document.documentElement.scrollHeight);
     }
-    for (let i = 0; i < 1000; i++) {
-      scrollToBottom();
-    }
+
+    scrollToBottom();
+    setTimeout(scrollToBottom, 1500);
   });
 </script>
 </body>
